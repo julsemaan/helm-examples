@@ -1,3 +1,5 @@
+yaml
+Copy
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -31,3 +33,10 @@ spec:
             httpGet:
               path: /
               port: http
+          resources:
+            requests:
+              cpu: {{ .Values.requests.cpu }}
+              memory: {{ .Values.requests.memory }}
+            limits:
+              cpu: {{ .Values.limits.cpu }}
+              memory: {{ .Values.limits.memory }}
