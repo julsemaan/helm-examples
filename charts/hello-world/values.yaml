@@ -25,3 +25,11 @@ serviceAccount:
 service:
   type: ClusterIP
   port: 80
+
+requests:
+  cpu: 1
+  memory: 1Gi
+
+limits:
+  cpu: 2
+  memory: 2Gi
